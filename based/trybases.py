@@ -10,7 +10,7 @@ if len(sys.argv) < 2:
 	exit()
 
 string = ' '.join(sys.argv[1:])
-for base in [2, 4, 8, 16, 32]:
+for base in [2, 4, 8, 10, 16, 32]:
 	s = 'err'
 	try:
 		s = ''.join([chr(int(s, base)) for s in string.split()]);
