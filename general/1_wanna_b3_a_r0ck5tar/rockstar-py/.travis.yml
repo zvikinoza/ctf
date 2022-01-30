@@ -1,0 +1,21 @@
+language: python
+dist: bionic
+
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9-dev"
+  - "3.10-dev"
+  - "nightly"
+
+jobs:
+  allow_failures:
+    - python: "nightly"
+
+install:
+  - python setup.py install
+
+script:
+  - python tests/run_tests.py
+
